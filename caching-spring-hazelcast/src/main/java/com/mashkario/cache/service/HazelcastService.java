@@ -10,7 +10,7 @@ import java.util.Collection;
 @Component
 public class HazelcastService {
 
-    private static final String MAP_NAME = "People";
+    public static final String MAP_NAME = "People";
 
     private final HazelcastInstance hazelcastInstance;
 
