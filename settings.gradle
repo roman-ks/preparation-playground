@@ -1,0 +1,3 @@
+rootProject.name = 'preparation-playground'
+include 'caching-spring-hazelcast'
+
