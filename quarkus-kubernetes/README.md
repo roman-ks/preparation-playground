@@ -48,10 +48,10 @@ You can then execute your native executable with: `./build/kubernetes-quickstart
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
 
 ## Running in Kubernetes
-Make sure gradle.properties below are set.
-quarkus.container-image.username=xxx
-quarkus.container-image.group=xxx
-quarkus.container-image.password=xxx
+Make sure gradle.properties below are set.  
+quarkus.container-image.username=xxx  
+quarkus.container-image.group=xxx  
+quarkus.container-image.password=xxx  
 
 Note password has to grant read and write permissions.
 
