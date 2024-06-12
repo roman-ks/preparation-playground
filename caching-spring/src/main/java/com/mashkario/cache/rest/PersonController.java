@@ -14,7 +14,7 @@ public class PersonController {
 
     private final HazelcastService hazelcastService;
 
-
+//ollama run codellama:7b "write unit test with junit5 and spring test artifacts for class $(cat caching-spring/src/main/java/com/mashkario/cache/rest/PersonController.java)"
 
     @Autowired
     public PersonController(HazelcastService hazelcastService) {
@@ -41,6 +41,17 @@ public class PersonController {
     @PutMapping("/{id}")
     public Person addPerson(@PathVariable String id, @RequestBody Person person) {
         return hazelcastService.put(id, person);
+    }
+
+    // POST method to update an existing person. return response entity
+    @PostMapping("/{id}")
+    public ResponseEntity<Person> updatePerson(@PathVariable String id, @RequestBody Person person) {
+        Person updatedPerson = hazelcastService.put(id, person);
+        if (updatedPerson!=null) {
+            return ResponseEntity.ok(updatedPerson);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 
