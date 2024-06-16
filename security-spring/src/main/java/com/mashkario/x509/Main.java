@@ -1,4 +1,4 @@
-package com.mashkario;
+package com.mashkario.x509;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,9 +13,9 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @EnableMethodSecurity
 @SpringBootApplication
-public class X509AuthenticationServer {
+public class Main {
     public static void main(String[] args) {
-        SpringApplication.run(X509AuthenticationServer.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     @Bean
