@@ -16,6 +16,5 @@ dependencies {
 }
 
 springBoot {
-//    mainClass = "com.mashkario.jwt.Main"
-    mainClass = "com.mashkario.x509.Main"
+    mainClass = "com.mashkario.Main"
 }
